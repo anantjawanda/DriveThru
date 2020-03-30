@@ -1,0 +1,124 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+}
+
+.wrapper {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.header-container {
+    background: linear-gradient(#FFAA5C, #FF8585);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* COVID-19 DRIVE-THRU CODE title */
+header h1 {
+    position: absolute;
+    top: 150px;
+    left: 100px;
+    width: 550px;
+
+    font-weight: bolder;
+    font-size: 50px;
+    line-height: 61px;
+    color: #FFFFFF;
+    margin-bottom: 10px;
+}
+
+/* Desription Paragraph */
+header p {
+    position: absolute;
+    left: 100px;
+    width: 430px;
+    bottom: 320px;
+
+    font-weight: 500;
+    font-size: 19px;
+    line-height: 28px;
+    color: #FFFFFF;
+}
+
+/* Generate code form */
+input[type=text],input[type=password], select, textarea {
+    position: relative;
+    top: 15px;
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: 300;
+
+    background-color: #EEE9E2;
+    border: 0px solid #ccc; 
+    border-radius: 4px; 
+    box-sizing: border-box; 
+    margin-top: 6px;
+    margin-bottom: 16px; 
+    resize: vertical
+}
+
+input[type=text]:hover, input[type=password]:hover {
+    background-color: #F8E4C8;
+}
+
+/* 'Generate QR Code' Title */
+label {
+    position: relative;
+    left: 145px;
+    font-weight: bold;
+    color: #FF5A5A;
+}
+
+/* submit button in form */
+input[type=submit] {
+    position: relative;
+    top: 25px;
+    width: 460px;
+    font-weight: bolder;
+    font-size: 15px;
+    background-color: #FF5A5A;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    display: inline-block;
+    transition: 300ms; 
+}
+
+input[type=submit]:hover {
+    transform: translateY(-4px);
+}
+
+.container {
+    position: absolute;
+    left: 700px;
+    top: 160px;
+    height: 445px;
+    width: 500px;
+    border-radius: 5px;
+    background-color: #FFFFFF;
+    padding: 20px;
+  }
+
+.virus-image {
+    display: flex;
+    position: absolute;
+    left: 200px;
+    bottom: 50px;
+}

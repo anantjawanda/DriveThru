@@ -121,17 +121,17 @@
             document.getElementById("change").href = "signup.css";
         });
         document.getElementById("loginButton").addEventListener("click", () => {
-            for (let i = 0; i < arr.length; ++i) {
-                console.log(arr[i]);
-                if (arr[i][0] == document.getElementById("email").value && arr[i][1] == document.getElementById("pass").value) {
-                    name = arr[i][2];
+            // for (let i = 0; i < arr.length; ++i) {
+            //     console.log(arr[i]);
+            //     if (arr[i][0] == document.getElementById("email").value && arr[i][1] == document.getElementById("pass").value) {
+            //         name = arr[i][2];
                     document.getElementById("section_1").hidden = true;
                     document.getElementById("section_2").hidden = false;
                     document.getElementById("section_3").hidden = true;
                     document.getElementById("change").href = "login.css";
                     document.getElementById("greet").innerHTML = "Hello, " + name;
-                }
-            }
+            //     }
+            // }
         });
         document.getElementById("backHome").addEventListener("click", () => {
             document.getElementById("section_1").hidden = false;
