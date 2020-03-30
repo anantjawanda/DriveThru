@@ -45,7 +45,7 @@ header h1 {
 /* LOGIN button */
 #loginButton {
     position: absolute;
-    bottom: 160px;
+    bottom: 140px;
     left: 825px;
     font-size: 20px;
     line-height: 24px;
@@ -68,7 +68,7 @@ header h1 {
 /* SIGN UP button */
 #signupButton {
     position: absolute;
-    bottom: 160px;
+    bottom: 140px;
     left: 1000px;
     font-size: 20px;
     line-height: 24px;
