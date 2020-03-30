@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>COVID-19 Drive Through</title>
+    <link rel="stylesheet" href="home.css" id = "change"/>
+    <!-- <link rel="stylesheet" href="login.css" />
+    <link rel="stylesheet" href="signup.css" /> -->
+</head>
+
+<body>
+    <div id = "section_1">
+        <div class="header-container">
+            <div class="wrapper">
+                <header>
+                    <div class="container">
+                        <!-- <label>Generate QR Code</label> -->
+        
+                        <input type="text" id="user" name="email" placeholder="Email">
+                        <input type="password" id="pass" name="pass" placeholder="Password">
+        
+                        <!-- <input type="submit" value="GENERATE & SEND TO E-MAIL" href='home.html'> -->
+                    </div>
+                    <div class="content">
+                        <h1>COVID-19 DRIVE-THRU CODE</h1>
+                        <a id="loginButton">
+                            LOGIN
+                        </a>
+                        <!-- <a href="login.html" id="loginButton1">
+                            WORKER LOGIN
+                        </a> -->
+                        <a id="signupButton">
+                            SIGN UP
+                        </a>
+                        <!-- <a href="signup.html" id="signupButton1">
+                            WORKER SIGN UP
+                        </a> -->
+                    </div>
+                    <div class="virus-image">
+                        <img src="viruses.png"> <!-- ADD STATIC IMAGE HERE -->
+                    </div>
+                </header>
+            </div>
+        </div>
+    </div>
+    <div id = "section_2">
+        <div class="header-container">
+            <div class="wrapper">
+                <header>
+                    <div class="content">
+                        <h1 id = "greet">Hello.</h1>
+                        <p>
+                            Your unique identification QR Code is downloadable. Please visit your test centre when able to.
+                        </p>
+                        <a href="qrcode.png" download id="downloadImage">
+                            Download QR Code
+                        </a>
+                    </div>
+                    <div class="QRCodeImage">
+                        <img src="qrcode.png" alt="">
+                        <!-- where qr code img will be displayed -->
+                    </div>
+                    <div class="virus-image">
+                        <img src="viruses.png" alt="">
+                    </div>
+                </header>
+            </div>
+        </div>
+    </div>
+    <div id = "section_3">
+        <div class="header-container">
+            <div class="wrapper">
+                <header>
+                    <div class="content">
+                        <h1>COVID-19 DRIVE THRU CODE</h1>
+                        <p>
+                            Reduce wait times by presenting the following identification QR Code at COVID-19 drive-thru testing
+                            centres.
+                        </p>
+        
+                    </div>
+                    <div class="container">
+                        <label>Generate QR Code</label>
+        
+                        <input type="text" id="fnameText" name="fullname" placeholder="Full name">
+                        <input type="text" id="emailText" name="email" placeholder="E-mail">
+                        <input type="text" id="phoneText" name="phone" placeholder="Phone Number">
+                        <input type="text" id="govIDText" name="govID" placeholder="Government Issued ID Number">
+                        <input type="password" id="passw" name="govID" placeholder="Password">
+                        <!-- <input type="text" id="" -->
+        
+                        <input type="submit" value="GENERATE & SEND TO E-MAIL" id = "backHome">
+                    </div>
+                    <div class="virus-image">
+                        <img src="viruses.png" alt="">
+                    </div>
+                </header>
+            </div>
+        </div>
+    </div>
+    <script>
+        let arr = [];
+        let name = "";
+        document.getElementById("section_1").hidden = false;
+        document.getElementById("section_2").hidden = true;
+        document.getElementById("section_3").hidden = true;
+        document.getElementById("change").href = "home.css";
+        document.getElementById("signupButton").addEventListener("click", () => {
+            // <input type="text" id="fnameText" name="fullname" placeholder="Full name">
+            // <input type="text" id="emailText" name="email" placeholder="E-mail">
+            // <input type="text" id="phoneText" name="phone" placeholder="Phone Number">
+            // <input type="text" id="govIDText" name="govID" placeholder="Government Issued ID Number">
+            // <input type="password" id="govIDText" name="govID" placeholder="Password">
+            document.getElementById("section_1").hidden = true;
+            document.getElementById("section_2").hidden = true;
+            document.getElementById("section_3").hidden = false;
+            arr.push([document.getElementById("emailText").value, 
+                document.getElementById("passw").value, 
+                document.getElementById("fnameText").value]);
+            console.log(arr);
+            document.getElementById("change").href = "signup.css";
+        });
+        document.getElementById("loginButton").addEventListener("click", () => {
+            for (let i = 0; i < arr.length; ++i) {
+                console.log(arr[i]);
+                if (arr[i][0] == document.getElementById("email").value && arr[i][1] == document.getElementById("pass").value) {
+                    name = arr[i][2];
+                    document.getElementById("section_1").hidden = true;
+                    document.getElementById("section_2").hidden = false;
+                    document.getElementById("section_3").hidden = true;
+                    document.getElementById("change").href = "login.css";
+                    document.getElementById("greet").innerHTML = "Hello, " + name;
+                }
+            }
+        });
+        document.getElementById("backHome").addEventListener("click", () => {
+            document.getElementById("section_1").hidden = false;
+            document.getElementById("section_2").hidden = true;
+            document.getElementById("section_3").hidden = true;
+            document.getElementById("change").href = "home.css";
+        });
+    </script>
+</body>
+
+</html>

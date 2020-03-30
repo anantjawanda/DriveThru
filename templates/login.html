@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>COVID-19 Drive Through</title>
+        <link rel="stylesheet" href="{{url_for('static', filename='login.css')}}" />
+    </head>
+    <body>    
+        <div class="header-container">
+            <div class="wrapper">
+                <header>
+                    <div class="content">
+                        <h1>Hello, "NAME"</h1>
+                        <p>
+                            Your unique identification QR Code is downloadable. Please visit your test centre when able to.
+                        </p>
+                        <a href="{{url_for('static', filename='qrcode.png')}}" download id = "downloadImage">
+                            Download QR Code
+                        </a>
+                    </div>
+                    <div class="QRCodeImage">
+                        <img src="{{url_for('static', filename='qrcode.png')}}" alt="">    <!-- where qr code img will be displayed -->
+                    </div>
+                    <div class="virus-image">
+                        <img src="{{url_for('static', filename='viruses.png')}}" alt=""> 
+                    </div>
+                </header>
+            </div>
+        </div>
+        <script src="{{url_for('static', filename='index.js')}}"></script>
+    </body>
+</html>

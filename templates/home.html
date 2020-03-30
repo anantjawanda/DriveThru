@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>COVID-19 Drive Through</title>
+        <link rel="stylesheet" href="{{url_for('static', filename='home.css')}}" />
+    </head>
+    <body>
+        
+        <div class="header-container">
+            <div class="wrapper">
+                <header>
+                    <div class="container">
+                        <!-- <label>Generate QR Code</label> -->
+                    
+                        <input type="text" id="user" name="email" placeholder="Email">
+                        <input type="password" id="pass" name="pass" placeholder="Password">
+
+                        <!-- <input type="submit" value="GENERATE & SEND TO E-MAIL" href='home.html'> -->
+                    </div>
+                    <div class="content">
+                        <h1>COVID-19 DRIVE-THRU CODE</h1>
+                        <a href="login.html" id = "loginButton">
+                            PATIENT LOGIN
+                        </a>
+                        <a href="login.html" id = "loginButton1">
+                            WORKER LOGIN
+                        </a>
+                        <a href="signup.html" id = "signupButton">
+                            PATIENT SIGN UP
+                        </a>
+                        <a href="signup.html" id = "signupButton1">
+                            WORKER SIGN UP
+                        </a>
+                    </div>
+                    <div class="virus-image">
+                        <img src="{{url_for('static', filename='viruses.png')}}">   <!-- ADD STATIC IMAGE HERE -->
+                    </div>
+                </header>
+            </div>
+        </div>
+        <script src="{{url_for('static', filename='index.js')}}"></script>
+    </body>
+</html>

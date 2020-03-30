@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>COVID-19 Drive Through</title>
+        <link rel="stylesheet" href="{{url_for('static', filename='signup.css')}}" />
+    </head>
+    <body>
+                
+        <div class="header-container">
+            <div class="wrapper">
+                <header>
+                    <div class="content">
+                        <h1>COVID-19 DRIVE THRU CODE</h1>
+                        <p>
+                            Reduce wait times by presenting the following identification QR Code at COVID-19 drive-thru testing centres.
+                        </p>
+                        
+                    </div>
+                    <div class="container">
+                        <label>Generate QR Code</label>
+                        
+                        <input type="text" id="fnameText" name="fullname" placeholder="Full name">
+                        <input type="text" id="emailText" name="email" placeholder="E-mail">
+                        <input type="text" id="phoneText" name="phone" placeholder="Phone Number">
+                        <input type="text" id="govIDText" name="govID" placeholder="Government Issued ID Number">
+                        <input type="password" id="govIDText" name="govID" placeholder="Password">
+                        <!-- <input type="text" id="" -->
+                
+                        <input type="submit" value="GENERATE & SEND TO E-MAIL" href='home.html'>
+                    </div>
+                    <div class="virus-image">
+                        <img src="{{url_for('static', filename='viruses.png')}}" alt=""> 
+                    </div>
+                </header>
+            </div>
+        </div>
+        <script src="{{url_for('static', filename='index.js')}}"></script>
+    </body>
+</html>

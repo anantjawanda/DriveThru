@@ -1,0 +1,129 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+}
+
+.wrapper {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.header-container {
+    background: linear-gradient(#FFAA5C, #FF8585);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* COVID-19 DRIVE-THRU CODE title */
+header h1 {
+    position: relative;
+    top: 50%;
+    width: 614px;
+    height: 328px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 88.556px;
+    line-height: 100px;
+    color: #FFFFFF;
+    margin-bottom: 30px;
+}
+
+/* LOGIN button */
+#loginButton {
+    position: absolute;
+    bottom: 160px;
+    left: 825px;
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: bold;
+    color: #FFFFFF;
+    text-decoration: none;
+
+    background: #FF5A5A;
+    border-radius: 21px;
+    padding: 12px 48px;
+
+    display: inline-block;
+    transition: 300ms; 
+}
+
+#loginButton:hover {
+    transform: translateY(-4px);
+}
+
+/* SIGN UP button */
+#signupButton {
+    position: absolute;
+    bottom: 160px;
+    left: 1000px;
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: bold;
+    color: #FFFFFF;
+    text-decoration: none;
+
+    background: #FF5A5A;
+    border-radius: 21px;
+    padding: 12px 48px;
+
+    display: inline-block;
+    transition: 300ms; 
+}
+
+#signupButton:hover {
+    transform: translateY(-4px);
+}
+
+.virus-image {
+    display: flex;
+    position: absolute;
+    right: 200px;
+    top: 150px;
+}
+
+.container {
+    position: absolute;
+    left: 740px;
+    top: 360px;
+    height: 200px;
+    width: 500px;
+    border-radius: 5px;
+    background-color: #FFFFFF;
+    padding: 20px;
+  }
+
+  /* Generate code form */
+input[type=text], input[type=password], select, textarea {
+    position: relative;
+    top: 15px;
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: 300;
+
+    background-color: #EEE9E2;
+    border: 0px solid #ccc; 
+    border-radius: 4px; 
+    box-sizing: border-box; 
+    margin-top: 6px;
+    margin-bottom: 16px; 
+    resize: vertical
+}
+
+input[type=text]:hover, input[type=password]:hover {
+    background-color: #F8E4C8;
+}
