@@ -21,3 +21,5 @@ We learned how to create a website, use Google resources, and code a project in 
 
 What's next for DriveThruCovid-19
 We hope to fix any issues that occurred for us during the process and also features that allow for the information from users to be stored in databases and be readily accessible.
+
+[Devpost Link](https://devpost.com/software/drivethrucovid-19)
